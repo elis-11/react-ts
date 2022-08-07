@@ -24,12 +24,13 @@ function App() {
       {error && <ErrorMessage error={error} />}
       {products.map((product) => (
         <Product product={product} key={product.id} />
-      ))}
+        ))}
       {modal && (
         <Modal title="Create new product" onClose={() => setModal(false )}>
           <CreateProduct onCreate={createHandler} />
         </Modal>
       )}
+      <button onClick={() => setModal(true)}className="Add">Add Product</button>
     </div>
   );
 }
