@@ -3,14 +3,17 @@ import { products } from "./data/products";
 import "./App.scss";
 import axios from "axios";
 import { IProduct } from "./models";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+
+const [products, setProducts]= useState<IProduct[]>([])
+
   const fetchProducts = async () => {
     const response = await axios.get<IProduct[]>(
-      "https://fakestoreapi.com/products?limit=10"
+      "https://fakestoreapi.com/products?limit=20"
     );
-    console.log(response);
+setProducts(response.data)
     
   };
 
