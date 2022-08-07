@@ -28,19 +28,24 @@
     border-radius: 50%;
     animation: spinner 1.5s linear infinite;
   }
+  .error {
+    padding: 5rem;
+    color: red;
+    font-size: 2rem;
+  }
   .Product {
     width: 90%;
     height: auto;
     display: column;
     border: 1px solid #ccc;
-    padding: .4em;
+    padding: 0.4em;
     margin: 0.3em;
     img {
       padding-top: 0.5rem;
       width: 5rem;
       height: 5rem;
     }
-    p{
+    p {
       margin: 0;
       padding: 0;
     }
