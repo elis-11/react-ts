@@ -6,25 +6,26 @@ import { IProduct } from "./models";
 import { useEffect, useState } from "react";
 
 function App() {
-
-const [products, setProducts]= useState<IProduct[]>([])
+  const [products, setProducts] = useState<IProduct[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchProducts = async () => {
+    setLoading(true); // start loading Data
     const response = await axios.get<IProduct[]>(
       "https://fakestoreapi.com/products?limit=20"
     );
-setProducts(response.data)
-    
+    setProducts(response.data);
+    setLoading(false); //finish loading Data
   };
 
   useEffect(() => {
-
-fetchProducts()
+    fetchProducts();
   }, []);
 
   return (
     <div className="App">
       <div>Product</div>
+      {loading && <p className="loading">Loading...</p>}
       {products.map((product) => (
         <Product product={product} key={product.id} />
       ))}
