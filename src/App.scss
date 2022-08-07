@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.App {
+  color: rgb(38, 37, 37);
+  .Product {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 0.3em;
+    img {
+      width: 2rem;
+      padding-right: 1em;
+    }
+  }
+}
