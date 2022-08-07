@@ -5,9 +5,10 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <Product product={products[0]}/> 
-      <Product product={products[1]}/> 
-      <Product product={products[2]}/> 
+      <div>Product</div>
+      {products.map((product) => (
+        <Product product={product} key={product.id} />
+      ))}
     </div>
   );
 }
