@@ -15,6 +15,9 @@ const [count, setCount ]= useState(0)
   ]);
 }
 
-https://fakestoreapi.com/products
-
 -- 2
+https://fakestoreapi.com/products  -DATA for data/products.ts
+
+npm i axios 51:30
+
+https://fakestoreapi.com -fetch DATA
