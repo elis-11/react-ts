@@ -1,15 +1,50 @@
-#root {
-  margin: auto;
-  // padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+nav {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(225, 215, 215);
+  place-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 2rem;
+    &:hover {
+      color: rgb(186, 170, 170);
+    }
+  }
+  a.active {
+    color: rgb(151, 112, 112);
+  }
 }
 
 .App {
   width: 100%;
   height: 100vh;
-  place-items: center;
-  margin: 0;
-  padding: 0;
+  display: column;
+  text-align: center;
+  align-items: center;
+  padding-top: 2rem;
   color: rgb(38, 37, 37);
   @keyframes spinner {
     0% {
@@ -22,6 +57,7 @@
   .loading {
     margin: 10rem;
     padding: 4rem;
+    margin: auto;
     width: 50px;
     height: 50px;
     border: 10px solid #f3f3f3; /* Light grey */
@@ -66,13 +102,12 @@
     bottom: 0;
   }
   .modal {
-    background: white;
     position: absolute;
     width: 30rem;
     height: 9rem;
-    position: absolute;
-    top: 400px;
-    margin-left: 4rem;
+    top: 20%;
+    background: white;
+    left: 33%;
     form {
       input {
         width: 90%;
@@ -102,8 +137,8 @@
       0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     &:hover {
       color: rgb(149, 137, 137);
-      box-shadow: inset 0 -3em 3em white,
-      0 0 0 2px grey, 0.3em 0.3em 1em rgb(190, 181, 181);
+      box-shadow: inset 0 -3em 3em white, 0 0 0 2px grey,
+        0.3em 0.3em 1em rgb(190, 181, 181);
     }
   }
 }
