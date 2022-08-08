@@ -14,6 +14,6 @@ export const Modal = ({ children, title, onClose }: ModalProps) => {
         <h2>{title}</h2>
         {children}
       </div>
-    </>
+    </>  
   );
 };

@@ -30,7 +30,7 @@ export function CreateProduct({onCreate}: CreateProductProps) {
 
     if (value.trim().length === 0) {
       setError("Please enter valid title!");
-      return;
+      return;   
     }
 
     productData.title = value;
